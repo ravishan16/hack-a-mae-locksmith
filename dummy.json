@@ -1,16 +1,16 @@
 {
   "report": [
     {
-  "package_name": "com.fasterxml.jackson.core:jackson-databind",
-  "version_guidance": "2.15.0"
-},
-{
-  "package_name": "org.springframework:spring-beans",
-  "version_guidance": "6.0.8"
-},
-{
-  "package_name": "async",
-  "version_guidance": "3.2.4"
-}
+      "package_name": "com.fasterxml.jackson.core:jackson-databind",
+      "version_guidance": "2.15.0"
+    },
+    {
+      "package_name": "org.springframework:spring-beans",
+      "version_guidance": "6.0.8"
+    },
+    {
+      "package_name": "async",
+      "version_guidance": "3.2.4"
+    }
   ]
 }
