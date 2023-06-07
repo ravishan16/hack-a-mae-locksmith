@@ -11,9 +11,9 @@
       "version_guidance": "6.0.8"
     },
     {
-      "package_name": "async",
+      "package_name": "mysql:mysql-connector-java",
       "affected_project": "G0H-INNERSOURCE-HACKATHON",
-      "version_guidance": "3.2.4"
+      "version_guidance": "8.0.33"
     }
   ]
 }
