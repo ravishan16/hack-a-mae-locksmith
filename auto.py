@@ -44,6 +44,8 @@ def pom():
     if "BUILD SUCCESS" in out:
         print("success!")
     else:
+        #Run a smaller subset and attempt to build
+        print('Running a smaller subset to find the problem builds...')
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
