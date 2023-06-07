@@ -3,12 +3,22 @@
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 import xml.etree.ElementTree as ET
+import os
+import subprocess
+
+
+
 
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
+def run_cmd(command):
+    # return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE).stdout.read()
+    p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+    out = p.communicate()[0]
+    return out
 def pom():
     pom_file = "pom.xml"
 
@@ -27,9 +37,16 @@ def pom():
         print(f"{group_id}:{artifact_id}:{version}")
 
 
+    # subprocess.call(["mvn", "clean", "install"], shell=True)
+    # subprocess.call(["mvn", "clean", "install"], shell=True)
+    dependencies = 'mvn clean install'
+    out = str(run_cmd(dependencies))
+    if "BUILD SUCCESS" in out:
+        print("success!")
+    else:
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
     pom()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
